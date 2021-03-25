@@ -1,7 +1,7 @@
 
 .login{
     background-color: $secondary-color;
-
+    font-weight: 600;
     &__title{
        @extend %form-title;
        text-align: center;

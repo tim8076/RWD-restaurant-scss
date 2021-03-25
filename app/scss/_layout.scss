@@ -83,7 +83,7 @@
 .hero{
     background-color: $black;
     .container{
-        background-image: url('/images/header_mobile.png');
+        background-image: url('../../images/header_mobile.png');
         height: 420px;
         color: $white;
         display: flex;
@@ -91,7 +91,7 @@
         align-items: center;
 
         @include pad{
-        background-image: url('/images/header_desktop.png');
+        background-image: url('../../images/header_desktop.png');
        }
     }
 

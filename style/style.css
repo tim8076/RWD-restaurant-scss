@@ -424,7 +424,7 @@ button--bg, .button--bg {
 }
 
 .hero .container {
-  background-image: url("/images/header_mobile.png");
+  background-image: url("../../images/header_mobile.png");
   height: 420px;
   color: #ffffff;
   display: -webkit-box;
@@ -440,7 +440,7 @@ button--bg, .button--bg {
 
 @media (min-width: 768px) {
   .hero .container {
-    background-image: url("/images/header_desktop.png");
+    background-image: url("../../images/header_desktop.png");
   }
 }
 
@@ -687,7 +687,7 @@ button--bg, .button--bg {
 
 .cheif__image {
   height: 460px;
-  background-image: url("/images/main_chef_brown.png");
+  background-image: url("../../images/main_chef_brown.png");
   background-position: right center;
 }
 
@@ -1145,6 +1145,7 @@ button--bg, .button--bg {
 
 .login {
   background-color: #EFE9E7;
+  font-weight: 600;
 }
 
 .login__title {
@@ -1170,6 +1171,7 @@ button--bg, .button--bg {
 
 .signup {
   background-color: #EFE9E7;
+  font-weight: 600;
 }
 
 .signup__title {
