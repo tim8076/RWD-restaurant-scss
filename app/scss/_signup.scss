@@ -1,0 +1,27 @@
+
+.signup{
+    background-color: $secondary-color;
+
+    &__title{
+       @extend %form-title;
+       text-align: center;
+    }
+
+    &__subtitle{
+        @extend %form-subtitle;
+        text-align: center;
+    }
+    .form__input.email{
+        margin-bottom: 1.5rem;
+    }
+    .form__input.password:first-of-type{
+        margin-bottom: 1.2rem;
+    }
+    .icon.last{
+        top: 1.2rem;
+    }
+    .buttons{
+       text-align: right;
+    }
+    
+}

@@ -1,0 +1,191 @@
+
+.header{
+    background-color: rgba(0,0,0,.75);
+    color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    a{
+        color: $white;
+    }
+    .container{
+        padding: 1.6rem 1.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        
+        @include pad{
+            padding: 0 1.8rem;
+        }
+    }
+    &__toggle{
+        font-size: 2.4rem;
+    }
+    &__menu{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 5.6rem;     
+        max-height: 0;
+        overflow: hidden;
+        transition: all 1s ease-in-out;      
+
+        @include pad{
+            max-height: 500px;
+            position: static;
+            display: flex;
+        }
+
+        &.active{
+            max-height: 500px;
+        }
+
+        &__link{
+            display: block;
+            background-color: $primary-color;
+            padding: 1.5em 0;
+            text-align: center;
+            border-bottom: 2px solid $white;
+            position: relative;
+            transition: all 250ms ease-in-out;
+
+            @include pad{
+                background-color: transparent;
+                border-bottom: none;
+                padding: 1.8rem 1.4rem;
+                margin: 0 0.2rem;
+                line-height: 1.3;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                bottom: 0;
+                height: 3px;
+                background-color: $warning-color;
+                transition: all 250ms ease-in-out;
+            }
+            &:hover::before{
+                left: 0;
+                right: 0;
+            }
+            &:hover{
+                color: $warning-color;
+            }
+        }
+    }
+}
+
+.hero{
+    background-color: $black;
+    .container{
+        background-image: url('/images/header_mobile.png');
+        height: 420px;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include pad{
+        background-image: url('/images/header_desktop.png');
+       }
+    }
+
+    &__text{
+        display: inline-block;
+        padding: 1.5rem;
+        background-color: rgba(0,0,0,.35);
+        text-align: center;
+        @include pad{
+            padding: 2rem;
+        }
+    }
+    &__title{
+        margin-bottom: 1.6rem;
+        >span{
+          display: block;
+          @include pad{
+              display: inline;
+          }
+        }
+    }
+    &__subtitle{
+        line-height: 1.5;
+    }
+}
+
+.footer{
+    background-color: $secondary-color;
+    font-weight: 600;
+
+    .container{
+        @include pad{
+            display: flex;
+        }
+    }
+    &__subtitle{
+        font-size: 2.4rem;
+        margin-bottom: 1.6rem;
+    }
+    &__abouts{
+        @include pad{
+            flex: 1 0 60%;
+            display: flex;
+        }
+    }
+    &__about{
+        margin-bottom: 3rem;
+         @include pad{
+             margin-bottom: 0;
+         }
+         @include desktop-below{
+            margin-right: 2rem;
+        }
+    }
+    &__contact{
+        li{
+          list-style: disc;
+          margin-left: 2rem;
+        }  
+        a{
+            color: $primary-color;
+        } 
+    }
+    &__social{
+       text-align: right;
+       @include pad{
+            flex: 1 0 40%;
+        }
+    }
+    &__title{
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 4.9rem;
+        font-weight: 900;
+    }
+    &__icon{
+        font-size: 3.6rem;
+        transition: all .1s ease-in-out;
+        &.google{
+            color: #db4437;
+            &:hover{
+                color: #a83228;
+            }
+        }
+        &.twitter{
+            color: #41ABE1;
+            &:hover{
+                color: #257ba7;
+            }
+        }
+         &.facebook{
+            color: #3A5795;
+             &:hover{
+                color: #195877;
+            }
+        }
+    }
+}
